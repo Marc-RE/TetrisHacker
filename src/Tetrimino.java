@@ -71,6 +71,18 @@ public class Tetrimino {
 		}
 	}
 	
+    public void rotateLeft(){
+        for(Brick brick : this.getBricks()) {
+             brick.setPos(-brick.getPosY(), brick.getPosX());
+        }		           
+    }
+    
+    public void rotateRight(){
+        for(Brick brick : this.getBricks()) {
+             brick.setPos(brick.getPosY(), -brick.getPosX());
+        }            
+    }
+        
 	private void addBrick(Brick brick) {
 		this.bricks.add(brick);
 	}
